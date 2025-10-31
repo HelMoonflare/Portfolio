@@ -3,6 +3,6 @@
       Enlace a Figma
 </a>
 
-<a href='.PrototipoConCSS/index.html'>
+<a href='PrototipoConCSS/index.html'>
       Prototipo con Css
 </a>
