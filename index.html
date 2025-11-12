@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='style.css'>
+  <script src='script.js' defer></script>
+  <title>Tablero Kanban</title>
+</head>
+
+<body>
+  <h1>Tablero Kanban</h1>
+  <main>
+    <div class="container">
+      <div class="title-container">
+        <h2>Todo</h2>
+      </div>
+
+      <div class="text-container" draggable="true">
+        <p>
+          Terminar la tarea 2 de cliente: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget
+          pellentesque tellus. Suspendisse sed diam id nibh commodo pharetra. Sed nisi sem, venenatis at risus id,
+          tincidunt porta magna.
+        </p>
+        <button class="btnRemove">X</button>
+      </div>
+
+      <div class="text-container" draggable="true">
+        <p>
+          Terminar la tarea 3 de cliente: In vitae purus ut ipsum malesuada pellentesque.
+        </p>
+        <button class="btnRemove">X</button>
+
+      </div>
+
+      <div class="text-container" draggable="true">
+        <p>
+          Terminar la tarea 3 de servidor.
+        </p>
+        <button class="btnRemove">X</button>
+
+      </div>
+
+      <input type="textarea" name="textarea" id="textarea" placeholder="Introduce un título">
+
+      <button class="btnAdd">
+        Añadir tarjeta
+      </button>
+
+    </div>
+
+    <div class="container">
+      <div class="title-container">
+        <h2>Doing</h2>
+      </div>
+      <div class="text-container" draggable="true">
+        <p>
+          Terminar la tarea 1 de cliente: Ut consectetur odio odio, quis sagittis est faucibus in. Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Nulla maximus mattis nulla, a sagittis dui. Fusce fermentum enim ut mauris
+          blandit aliquam.
+        </p>
+        <button class="btnRemove">X</button>
+      </div>
+      <button id="btnAdd1">
+        + Añade una tarjeta
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="title-container">
+        <h2>Done</h2>
+      </div>
+      <button id="btnAdd1">
+        + Añade una tarjeta </button>
+    </div>
+  </main>
+</body>
+
+</html>
