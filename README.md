@@ -6,3 +6,7 @@
 <a href='PrototipoConCSS/index.html'>
       Prototipo con Css
 </a>
+<br>
+<a href='Tablero Kanban/index.html'>
+      Tablero Kanban
+</a>
