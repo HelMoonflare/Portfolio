@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  color: rgb(43, 43, 43);
+  cursor: default;
+}
+
+body {
+  background: rgb(43, 43, 43);
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-continuar,
+#btnSiguienteCombate {
+  display: block;
+  margin: 20px auto 40px auto;
+  padding: 12px 24px;
+  font-size: 18px;
+  background: #6009B0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  transition: transform .3s ease, background .3s ease;
+}
+
+.btn-continuar:hover {
+  transform: scale(1.05);
+  background: #4e1386;
+}
+
+/* ─────────────────────────────
+  ESCENA 1: INICIO
+────────────────────────────── */
+/* Escena completa */
+#escena1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#escena1:hover {
+  transition: box-shadow .2s ease, transform .2s
+}
+
+#escena1>button:hover {
+  transition: transform .15s, box-shadow .15s
+}
+
+/* Tarjeta del jugador */
+.tarjeta-jugador {
+  background-color: #2ecc71;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+}
+
+
+/* ─────────────────────────────
+  ESCENA 2: MERCADO
+────────────────────────────── */
+#escena2 {
+  padding-bottom: 150px;
+}
+
+/* Título */
+#escena2 h2 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.mercado {
+  height: 300px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  scrollbar-width: none;
+}
+
+.grid-productos {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  padding-bottom: 140px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.imagen-producto-mercado {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .grid-productos .cesta-productos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .grid-productos .cesta-productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .grid-productos .cesta-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tarjeta de producto */
+.tarjeta-producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  transition: transform .3s ease, background .3s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta-producto.seleccionado {
+  background: #c7f9cc;
+}
+
+.btn-agregar,
+.btn-retirar {
+  margin-top: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #4e1386;
+}
+
+/* Cuando el producto está añadido a la cesta */
+.seleccionado {
+  background-color: #d9ffe0 !important;
+  border: 2px solid #2ecc71;
+}
+
+
+/* Nombre del producto */
+.tarjeta-producto h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Botón */
+.tarjeta-producto button {
+  margin-top: 0.8rem;
+  padding: 8px 14px;
+  background-color: #6009B0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.tarjeta-producto button:hover {
+  background-color: #4e1386;
+}
+
+/* Cesta de productos */
+.cesta-productos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 90vw;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #2ecc71;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.producto {
+  background: #6009B0;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  transition: transform .3s ease, background .3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.imagen-producto-cesta {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* ─────────────────────────────
+  ESCENA 3: ESTADÍSTICAS E INVENTARIO ACTUALIZADO
+────────────────────────────── */
+#escena3 {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+#tarjeta-jugador {
+  background-color: #2ecc71;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+}
+
+#inventario {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: sticky;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 90vw;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #2ecc71;
+  gap: 8px;
+  z-index: 1000;
+}
+
+
+/* ─────────────────────────────
+  ESCENA 4: ENEMIGOS
+────────────────────────────── */
+#escena4 {
+  padding: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.grid-enemigos {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 20px;
+}
+
+.tarjeta-enemigo {
+  background: #282828;
+  border: 2px solid #555;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+.tarjeta-enemigo img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+
+/* ─────────────────────────────
+  ESCENA 5: COMBATE
+────────────────────────────── */
+#contenedor-combate {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+#jugador-combate {
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#enemigo-combate {
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#stats-jugador-combate,
+#stats-enemigo-combate {
+  background: #2ecc71;
+  color: rgb(43, 43, 43);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.combatiente {
+  position: absolute;
+  bottom: 0;
+  transition: transform 1s ease-out;
+}
+
+.fuera-izquierda {
+  transform: translateX(-250%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.fuera-derecha {
+  transform: translateX(250%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.en-posicion {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+#jugador-combate {
+  left: 10%;
+}
+
+#enemigo-combate {
+  right: 10%;
+}
+
+#contenedor-combate img {
+  width: 150px;
+  height: auto;
+}
+
+
+/* ─────────────────────────────
+  ESCENA 6: RANKING
+────────────────────────────── */
+#resultadoFinal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.tarjeta-resultado {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.tarjeta-resultado.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.titulo-final {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.rango-final,
+.puntos-finales {
+  font-size: 1.3rem;
+}
