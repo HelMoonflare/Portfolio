@@ -12,10 +12,10 @@
 </a>
 
 <br>
-<a href='HelMoonflare.github.io/AventuraJS/index.html'>
+<a href='HelMoonflare.github.io/AventuraJS'>
       Enlace a la ejecución de Aventura JS
 </a>
 <br>
-<a href='HelMoonflare.github.io/AventuraJS'>
+<a href='https://github.com/HelMoonflare/HelMoonflare.github.io/tree/main/AventuraJS'>
       Enlace al código del repositorio de Aventura JS
 </a>
