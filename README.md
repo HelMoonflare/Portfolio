@@ -11,7 +11,7 @@
       Enlace a la ejecución del tablero Kanban
 </a>
 <br>
-<a href=https://github.com/HelMoonflare/Portfolio/tree/main/Tablero%20Kanban'>
+<a href='https://github.com/HelMoonflare/Portfolio/tree/main/Tablero%20Kanban'>
       Enlace al código del tablero Kanban
 </a>
 <br>
