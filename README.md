@@ -8,9 +8,12 @@
 </a>
 <br>
 <a href='Tablero Kanban/index.html'>
-      Tablero Kanban
+      Enlace a la ejecución del tablero Kanban
 </a>
-
+<br>
+<a href=https://github.com/HelMoonflare/Portfolio/tree/main/Tablero%20Kanban'>
+      Enlace al código del tablero Kanban
+</a>
 <br>
 <a href='HelMoonflare.github.io/AventuraJS/index.html'>
       Enlace a la ejecución de Aventura JS
